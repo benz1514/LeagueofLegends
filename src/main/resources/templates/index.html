@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก LeagueofLegends</title>
+</head>
+<a href="/LeagueofLegends/create">อัพแพท</a>
+<body>
+    <table>
+        <tr>
+            <td>เลขไอเท็ม</td>
+            <td>ชื่อไอเท็ม</td>
+            <td>ความเสียหายที่ทำ</td>
+            <td>ชนิดไอเท็ม</td>
+            <td>ความสามารถ</td>
+            <td>ราคาที่ต้องจ่าย</td>
+            <td>แก้ไข เพิ่ม|ลบ</td>
+        </tr>
+        <tr th:each="lol:${Yasuo}">
+            <td>
+                <P th:text="${lol.id}"></p>
+            </td>
+            <td>
+                <p th:text="${lol.itemname}"></p>
+            </td>
+            <td>
+                <p th:text="${lol.damageitem}"></p>
+            </td>
+            <td>
+                <P th:text="${lol.categoryitem}"></p>
+            </td>
+            <td>
+                <p th:text="${lol.abilityitem}"></p>
+            </td>
+            <td>
+                <p th:text="${lol.price}"></p>
+            </td>
+            <td>
+                <a th:href="  '/LeagueofLegends/edit?id=' + ${ lol.id } ">edit</a>
+                <a th:href="  '/LeagueofLegends/delete?id=' + ${lol.id} ">delete</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

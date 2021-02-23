@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แก้ไขข้อมูล/อัพแพท LeagueofLegends</title>
+</head>
+<body>
+    <a href="/LeagueofLegend/index">กลับหน้าแรก</a>
+    <form action="LeagueofLegend/editsave" th:object="${Yasuo}" method="POST">
+      
+        <input type="hidden" th:field="*{id}">
+        <label for="itemname">กรอกชื่อ ไอเท็ม : </label>
+        <input type="text" id="itemname" name="itemname" th:field="*{itemname}"><br><br>
+
+        <label for="damageitem">ดาเมจไอเท็มที่ทำได้ : </label>
+        <input type="text" id="damageitem" name="damageitem" th:field="*{damageitem}"><br><br>
+
+        <label for="categoryitem">ชนิดไอเท็ม : </label>
+        <input type="text" id="categoryitem" name="categoryitem" th:field="*{categoryitem}"><br><br>
+
+        <label for="ablityitem">ความสามารถ : </label>
+        <input type="textarea" id="ablityitem" name="ablityitem" th:field="*{ablityitem}"><br><br>
+
+        <label for="price">ราคาไอเท็ม : </label>
+        <input type="text" id="price" name="price" th:field="*{price}"><br><br>
+
+
+
+        
+        <input type="submit" value="Submit">
+        
+    </form>
+</body>
+</html>
